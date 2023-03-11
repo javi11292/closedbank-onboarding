@@ -3,7 +3,7 @@
 	import Header from "$lib/components/header";
 	import Image from "$lib/components/image";
 	import { t } from "$lib/utils/translate";
-	import { keys } from "./translations";
+	import keys from "./translations.json";
 </script>
 
 <Header>
@@ -11,8 +11,14 @@
 </Header>
 
 <div class="overflow-auto">
-	<Header>
-		<span class="text-3xl">{$t(keys.subheader)}</span>
+	<Header class="relative">
+		<div class="relative pb-3 text-center">
+			<div class="text-2xl">{$t(keys.subheader)}</div>
+			<div class="text-2xl">{$t(keys.subheader2)}</div>
+		</div>
+		<div
+			class="absolute bottom-0 -z-10 w-full translate-y-full bg-neutral-900 pb-20"
+		/>
 	</Header>
 
 	<Image src={sid1} />
