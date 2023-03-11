@@ -1,17 +1,19 @@
 <script lang="ts">
 	import sid1 from "$lib/assets/images/sid1.jpg";
+	import Container from "$lib/components/container";
 	import Header from "$lib/components/header";
 	import Image from "$lib/components/image";
+	import Input from "$lib/components/input";
 	import { t } from "$lib/utils/translate";
-	import keys from "./translations.json";
+	import keys from "./translations";
 </script>
 
 <Header>
 	<span class="text-4xl">Closedbank</span>
 </Header>
 
-<div class="overflow-auto">
-	<Header class="relative">
+<div class="flex flex-col items-center overflow-auto">
+	<Header class="relative self-stretch">
 		<div class="relative pb-3 text-center">
 			<div class="text-2xl">{$t(keys.subheader)}</div>
 			<div class="text-2xl">{$t(keys.subheader2)}</div>
@@ -21,5 +23,8 @@
 		/>
 	</Header>
 
-	<Image src={sid1} />
+	<Container>
+		<Image src={sid1} />
+		<Input label={$t(keys.nameLabel)} />
+	</Container>
 </div>
