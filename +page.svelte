@@ -1,13 +1,19 @@
 <script lang="ts">
 	import sid1 from "$lib/assets/images/sid1.jpg";
-	import AppBar from "$lib/components/app-bar";
+	import Header from "$lib/components/header";
 	import Image from "$lib/components/image";
+	import { t } from "$lib/utils/translate";
+	import { keys } from "./translations";
 </script>
 
-<AppBar>
+<Header>
 	<span class="text-4xl">Closedbank</span>
-</AppBar>
+</Header>
 
-<div class="p-2">
+<div class="overflow-auto">
+	<Header>
+		<span class="text-3xl">{$t(keys.subheader)}</span>
+	</Header>
+
 	<Image src={sid1} />
 </div>
