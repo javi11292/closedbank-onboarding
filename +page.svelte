@@ -25,6 +25,6 @@
 
 	<Container>
 		<Image src={sid1} />
-		<Input label={$t(keys.nameLabel)} />
+		<Input class="mt-10" label={$t(keys.nameLabel)} />
 	</Container>
 </div>
