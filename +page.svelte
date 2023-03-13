@@ -6,12 +6,9 @@
 	import Input from "$lib/components/input";
 	import Select from "$lib/components/select";
 	import { t } from "$lib/utils/translate";
+	import countries from "./countries.json";
+	import documentTypes from "./documentTypes.json";
 	import keys from "./translations";
-
-	const options = [
-		{ label: "España", value: "es" },
-		{ label: "Francia", value: "fr" },
-	];
 </script>
 
 <Header>
@@ -29,12 +26,13 @@
 		/>
 	</Header>
 
-	<Container>
-		<Image src={sid1} />
+	<Container class="flex flex-col">
+		<Image class="self-center" src={sid1} />
 		<Input class="mt-10" label={$t(keys.nameLabel)} />
-		<Select class="mt-5" {options} label={$t(keys.countryLabel)} />
-		<div>
-			<Select class="mt-5" {options} label={$t(keys.countryLabel)} />
+		<Select class="mt-5" options={countries} label={$t(keys.countryLabel)} />
+		<div class="mt-5 grid grid-cols-2 gap-5">
+			<Select options={documentTypes} label={$t(keys.documentTypeLabel)} />
+			<Input label={$t(keys.documentNumberLabel)} />
 		</div>
 	</Container>
 </div>
