@@ -7,9 +7,13 @@
 	import Input from "$lib/components/input";
 	import Select from "$lib/components/select";
 	import { t } from "$lib/utils/translate";
-	import countries from "./countries.json";
-	import documentTypes from "./documentTypes.json";
-	import keys from "./translations";
+	import documentTypes from "$onboarding/utils/documentTypes.json";
+	import keys from "$onboarding/utils/translations";
+	import type { PageData } from "./$types";
+
+	export let data: PageData;
+
+	const { Country } = data.imports;
 </script>
 
 <Header>
@@ -30,7 +34,7 @@
 	<Container class="flex flex-col">
 		<Image class="self-center" src={sid1} />
 		<Input class="mt-10" label={t(keys.nameLabel)} />
-		<Select class="mt-5" options={countries} label={t(keys.countryLabel)} />
+		<Country />
 		<div class="mt-5 grid grid-cols-2 gap-5">
 			<Select options={documentTypes} label={t(keys.documentTypeLabel)} />
 			<Input label={t(keys.documentNumberLabel)} />
