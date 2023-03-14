@@ -7,4 +7,7 @@ export default {
 	countryLabel: `${context}.country.label`,
 	documentTypeLabel: `${context}.documentType.label`,
 	documentNumberLabel: `${context}.documentNumber.label`,
+	phoneLabel: `${context}.phone.label`,
+	emailLabel: `${context}.email.label`,
+	start: `${context}.start`,
 };

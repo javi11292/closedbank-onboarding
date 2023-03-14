@@ -1,5 +1,6 @@
 <script lang="ts">
 	import sid1 from "$lib/assets/images/sid1.jpg";
+	import Button from "$lib/components/button";
 	import Container from "$lib/components/container";
 	import Header from "$lib/components/header";
 	import Image from "$lib/components/image";
@@ -34,5 +35,10 @@
 			<Select options={documentTypes} label={$t(keys.documentTypeLabel)} />
 			<Input label={$t(keys.documentNumberLabel)} />
 		</div>
+		<Input class="mt-5" label={$t(keys.phoneLabel)} />
+		<Input class="mt-5" label={$t(keys.emailLabel)} />
+		<Button variant="contained" class="mt-10 self-center">
+			{$t(keys.start)}
+		</Button>
 	</Container>
 </div>
