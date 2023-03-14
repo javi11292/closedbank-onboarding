@@ -19,8 +19,8 @@
 <div class="flex flex-1 flex-col items-center overflow-auto">
 	<Header class="relative self-stretch">
 		<div class="relative pb-3 text-center">
-			<div class="text-2xl">{$t(keys.subheader)}</div>
-			<div class="text-2xl">{$t(keys.subheader2)}</div>
+			<div class="text-2xl">{t(keys.subheader)}</div>
+			<div class="text-2xl">{t(keys.subheader2)}</div>
 		</div>
 		<div
 			class="absolute bottom-0 -z-10 w-full translate-y-full bg-neutral-900 pb-20"
@@ -29,16 +29,16 @@
 
 	<Container class="flex flex-col">
 		<Image class="self-center" src={sid1} />
-		<Input class="mt-10" label={$t(keys.nameLabel)} />
-		<Select class="mt-5" options={countries} label={$t(keys.countryLabel)} />
+		<Input class="mt-10" label={t(keys.nameLabel)} />
+		<Select class="mt-5" options={countries} label={t(keys.countryLabel)} />
 		<div class="mt-5 grid grid-cols-2 gap-5">
-			<Select options={documentTypes} label={$t(keys.documentTypeLabel)} />
-			<Input label={$t(keys.documentNumberLabel)} />
+			<Select options={documentTypes} label={t(keys.documentTypeLabel)} />
+			<Input label={t(keys.documentNumberLabel)} />
 		</div>
-		<Input class="mt-5" label={$t(keys.phoneLabel)} />
-		<Input class="mt-5" label={$t(keys.emailLabel)} />
+		<Input class="mt-5" label={t(keys.phoneLabel)} />
+		<Input class="mt-5" label={t(keys.emailLabel)} />
 		<Button variant="contained" class="mt-10 self-center">
-			{$t(keys.start)}
+			{t(keys.start)}
 		</Button>
 	</Container>
 </div>
