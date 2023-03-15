@@ -14,6 +14,18 @@
 	export let data: PageData;
 
 	const { Country } = data.imports;
+
+	let disabled = false;
+	let form = {
+		name: undefined,
+		country: undefined,
+		documentType: undefined,
+		documentNumber: undefined,
+		phone: undefined,
+		email: undefined,
+	};
+
+	$: disabled = Object.values(form).some((value) => !value);
 </script>
 
 <Header>
@@ -33,15 +45,27 @@
 
 	<Container class="flex flex-col">
 		<Image class="self-center" src={sid1} />
-		<Input class="mt-10" label={t(keys.nameLabel)} />
-		<Country />
+		<Input bind:value={form.name} class="mt-10" label={t(keys.nameLabel)} />
+		<Country bind:selected={form.country} />
 		<div class="mt-5 grid grid-cols-2 gap-5">
-			<Select options={documentTypes} label={t(keys.documentTypeLabel)} />
-			<Input label={t(keys.documentNumberLabel)} />
+			<Select
+				bind:selected={form.documentType}
+				options={documentTypes}
+				label={t(keys.documentTypeLabel)}
+			/>
+			<Input
+				bind:value={form.documentNumber}
+				label={t(keys.documentNumberLabel)}
+			/>
 		</div>
-		<Input class="mt-5" label={t(keys.phoneLabel)} />
-		<Input class="mt-5" label={t(keys.emailLabel)} />
-		<Button variant="contained" class="mt-10 self-center">
+		<Input bind:value={form.phone} class="mt-5" label={t(keys.phoneLabel)} />
+		<Input bind:value={form.email} class="mt-5" label={t(keys.emailLabel)} />
+		<Button
+			href="access-key"
+			variant="contained"
+			class="mt-10 self-center"
+			{disabled}
+		>
 			{t(keys.start)}
 		</Button>
 	</Container>
