@@ -1,0 +1,10 @@
+{
+	"subheader": "onboarding.subheader",
+	"subheader2": "onboarding.subheader2",
+	"nameLabel": "onboarding.name.label",
+	"documentTypeLabel": "onboarding.documentType.label",
+	"documentNumberLabel": "onboarding.documentNumber.label",
+	"phoneLabel": "onboarding.phone.label",
+	"emailLabel": "onboarding.email.label",
+	"start": "onboarding.start"
+}

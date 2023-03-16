@@ -2,7 +2,7 @@
 	import Input from "$lib/components/input";
 	import type { Option } from "$lib/components/select";
 	import { t } from "$lib/utils/translate";
-	import keys from "$onboarding/utils/translations";
+	import keys from "./translations.json";
 
 	export let selected: Option | undefined = undefined;
 
